@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HabitacionesService } from '../servicios/habitaciones.service';
 
 @Component({
   selector: 'app-principal',
@@ -7,7 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PrincipalComponent implements OnInit {
 
-  constructor() { }
+  public listarhabitaciones:any[]=[]
+
+  constructor(public servicio:HabitacionesService) { 
+    this.servicio.buscarHabitaciones().subscribe(respuesta=>{this.listarhabitaciones=respuesta.datos})
+    
+
+  }
 
   ngOnInit(): void {
   }

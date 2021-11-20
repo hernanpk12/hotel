@@ -9,6 +9,8 @@ import { PrincipalComponent } from './principal/principal.component';
 import { ReservasComponent } from './reservas/reservas.component';
 import { FormularioreservasComponent } from './formularioreservas/formularioreservas.component';
 
+import {HttpClientModule} from '@angular/common/http'
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,10 +19,12 @@ import { FormularioreservasComponent } from './formularioreservas/formulariorese
     PrincipalComponent,
     ReservasComponent,
     FormularioreservasComponent
+
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
