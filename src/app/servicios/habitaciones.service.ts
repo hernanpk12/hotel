@@ -11,7 +11,11 @@ export class HabitacionesService {
     console.log("arrancamos")
    }
 
-   buscarHabitaciones():Observable<any>{
+   buscarHabitaciones(): Observable<any>{
      return this.peticion.get("https://apihotelesig.herokuapp.com/hoteles/v1/habitaciones")
+   }
+   crearReserva(datos:any): Observable<any>{
+     return this.peticion.post("https://apihotelesig.herokuapp.com/Avanzada/v1/reservas",datos)
+
    }
 }

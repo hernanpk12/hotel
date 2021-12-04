@@ -11,6 +11,8 @@ import { FormularioreservasComponent } from './formularioreservas/formulariorese
 
 import {HttpClientModule} from '@angular/common/http'
 
+import{FormsModule} from '@angular/forms'
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +26,8 @@ import {HttpClientModule} from '@angular/common/http'
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
